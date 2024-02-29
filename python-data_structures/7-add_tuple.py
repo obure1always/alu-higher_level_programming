@@ -1,19 +1,28 @@
 #!/usr/bin/python3
-# Write a function that adds 2 tuples.
 def add_tuple(tuple_a=(), tuple_b=()):
-    count1 = len(tuple_a)
-    count2 = len(tuple_b)
-    if count1 == 0:
-        tuple_a = (0, 0)
-    if count2 == 0:
-        tuple_b = (0, 0)
-    first = list(tuple_a)
-    second = list(tuple_b)
-    if count1 == 1:
-        first.append(0)
-    if count2 == 1:
-        second.append(0)
-    a = first[0] + second[0]
-    b = first[1] + second[1]
-    result = (a, b)
-    return result
+    len_a = len(tuple_a)
+    len_b = len(tuple_b)
+
+    if len_a == 0:
+        a1 = 0
+        a2 = 0
+    elif len_a == 1:
+        a1 = tuple_a[0]
+        a2 = 0
+    else:
+        a1 = tuple_a[0]
+        a2 = tuple_a[1]
+
+    if len_b == 0:
+        b1 = 0
+        b2 = 0
+    elif len_b == 1:
+        b1 = tuple_b[0]
+        b2 = 0
+    else:
+        b1 = tuple_b[0]
+        b2 = tuple_b[1]
+
+    new_tuple = (a1 + b1, a2 + b2)
+
+    return (new_tuple)
